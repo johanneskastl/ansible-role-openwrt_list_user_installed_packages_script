@@ -1,0 +1,10 @@
+---
+# openwrt_list_upgradable_packages_script/tasks/main.yml
+
+- name: 'Create /usr/bin/list_user-installed_packages.sh'
+  ansible.builtin.template:
+    src: 'list_user-installed_packages.sh.j2'
+    dest: '/usr/bin/list_user-installed_packages.sh'
+    owner: 'root'
+    group: 'root'
+    mode: '0744'
